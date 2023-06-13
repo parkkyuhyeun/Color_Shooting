@@ -519,7 +519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588751471}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1088587010}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: GuideBtn
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 03_Guide
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &588751471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876768641
@@ -714,6 +726,7 @@ GameObject:
   - component: {fileID: 1088587008}
   - component: {fileID: 1088587007}
   - component: {fileID: 1088587006}
+  - component: {fileID: 1088587010}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -807,6 +820,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1088587010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088587005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a763e487cc5509438c3d2d3ebee2556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436643238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555343611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1088587010}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: StartBtn
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 02_MainGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1555343611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1184,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743393920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1088587010}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: QuitBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1743393920
 MonoBehaviour:
   m_ObjectHideFlags: 0

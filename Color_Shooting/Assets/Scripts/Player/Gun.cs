@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     }
     public State state { get; private set; }
     public Transform firePosition;
-    //public ParticleSystem muzzleFlashEffect; //총구 화염
+    public ParticleSystem paintEffect; //총구 화염
     public float bulletLineEffetTime = 0.03f; //라인렌더러 유지 시간
 
     private LineRenderer bulletLineRenderer;
@@ -36,7 +36,7 @@ public class Gun : MonoBehaviour
         bulletLineRenderer.positionCount = 2;
         bulletLineRenderer.enabled = false;
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -75,7 +75,7 @@ public class Gun : MonoBehaviour
         //쏘는 위치, 쏘는 방향, out hit
         if (Physics.Raycast(firePosition.position, fireDirection, out hit, fireDistance))
         {
-            /*var target = hit.collider.GetComponent<IDamageable>();
+            var target = hit.collider.GetComponent<IDamageable>();
             //총알에 맞았고 해당 충돌체가 데미지를 입을 수 있다면 OnDamage를 통해 데미지 처리
             if (target != null)
             {
@@ -83,9 +83,9 @@ public class Gun : MonoBehaviour
             }
             else
             {
-                //총알에 맞았지만 해당 충돌체가 데미지를 입지 않는 물체라면 메탈 효과주기
                 EffectManager.Instance.PlayHitEffect(hit.point, hit.normal, hit.transform);
-            }*/
+                Debug.Log("This is not Ghost!");
+            }
             hitPosition = hit.point;
         }
         else
@@ -104,9 +104,9 @@ public class Gun : MonoBehaviour
 
     private IEnumerator ShotEffect(Vector3 hitPosition)
     {
-        audioSource.clip = shootAudio;
-        audioSource.Play();
-        muzzleFlashEffect.Play();
+        //audioSource.clip = shootAudio;
+        //audioSource.Play();
+        paintEffect.Play();
         bulletLineRenderer.SetPosition(0, firePosition.position);
         bulletLineRenderer.SetPosition(1, hitPosition);
         bulletLineRenderer.enabled = true;
@@ -129,8 +129,8 @@ public class Gun : MonoBehaviour
 
     public IEnumerator ReloadRoutine()
     {
-        audioSource.clip = reloadAudio;
-        audioSource.Play();
+        //audioSource.clip = reloadAudio;
+        //audioSource.Play();
 
         state = State.Reloading;
 

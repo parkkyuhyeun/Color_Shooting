@@ -9,8 +9,8 @@ public class PlayerMove : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     float mouseX = 0;
-    float moveSpeed = 10f;
-    float rotateSpeed = 10f;
+    float moveSpeed = 5f;
+    float rotateSpeed = 5f;
     float _verticalVelocity;
     private void Start()
     {
