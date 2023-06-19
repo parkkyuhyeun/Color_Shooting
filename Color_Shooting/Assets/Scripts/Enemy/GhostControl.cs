@@ -8,7 +8,7 @@ public class GhostControl : MonoBehaviour
     public enum State { Idle, Trace, Die }
     public State state = State.Idle;
 
-    public float traceDistance = 100f;
+    private float traceDistance = 100000000f;
     public bool isDie = false;
 
     private Transform playerTransform;

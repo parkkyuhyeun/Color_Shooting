@@ -21,7 +21,12 @@ public class EffectManager : MonoBehaviour
     }
 
     public ParticleSystem paintHitEffectPrefab;
+    [SerializeField] private List<ParticleSystem> paints;
 
+    public void ChangeEffectColor(int index)
+    {
+        paintHitEffectPrefab = paints[index];
+    }
 
     public void PlayHitEffect(Vector3 pos, Vector3 normal, Transform parent = null, EffectType effectType = EffectType.Paint)
     {

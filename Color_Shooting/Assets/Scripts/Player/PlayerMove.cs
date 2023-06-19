@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     float mouseX = 0;
-    float moveSpeed = 5f;
+    float moveSpeed = 7f;
     float rotateSpeed = 5f;
     float _verticalVelocity;
     private void Start()
@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         PlayerRotate();
-        if(controller.isGrounded == false)
+        if (controller.isGrounded == false)
         {
             _verticalVelocity = -9.8f * Time.fixedDeltaTime;
         }
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 dir = new Vector3(moveX, 0, moveZ);
-        controller.Move((transform.TransformDirection(dir) * Time.deltaTime * moveSpeed)+_verticalVelocity*Vector3.up);
+        controller.Move((transform.TransformDirection(dir) * Time.deltaTime * moveSpeed) + _verticalVelocity * Vector3.up);
         //PlayerMoving();
     }
 
